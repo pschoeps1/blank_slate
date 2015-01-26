@@ -1,0 +1,135 @@
+body {
+    min-width: 100%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+}
+
+.grid {
+    margin-left: -.17em;
+    margin-bottom: -.2em;
+    margin-top: -.2em;
+    margin-right: -.05em;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 33.33%;
+    height: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+img {
+    height: 400px;
+    width: 100%;
+}
+
+#grid3, #grid4 {
+    background-color: #753fa9;
+}
+
+#grid2, #grid5 {
+    background-color: white;
+}
+
+#grid1 {
+    width: 66.66%;
+    
+    .cache {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: .3;
+        top: 0;
+        overflow: hidden;
+        
+    }
+}
+
+#grid4 {
+    margin-top: -.1em;
+}
+
+#grid6 {
+  background: -webkit-linear-gradient(#753fa9, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#753fa9, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#753fa9, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#753fa9, white); /* Standard syntax */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+footer {
+  clear: both;
+  padding-top: 15px;
+  border-top: 1px solid white;
+  color: #4A4A4A;;
+  a {
+    color: #eaeaea;;
+    &:hover {
+      color: #1F0441;;
+      text-decoration: none;
+    }
+  }
+  small {
+    font-family: Arial;
+    padding: 1em;
+  }
+  
+  nav {
+      margin-top: -2em;
+  }
+  
+  ul {
+    font-family: Arial;
+    float: right;
+    list-style: none;
+    padding-right: 2em;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
