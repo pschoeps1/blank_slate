@@ -12,6 +12,11 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Arial;
+  color: #4A4A4A;
+}
+
 .container {
     margin: 0;
     left: 0;
@@ -44,7 +49,7 @@ img {
 }
 
 #grid3, #grid4 {
-    background-color: #753fa9;
+    background-color: #141F1F;
 }
 
 #grid2, #grid5 {
@@ -67,15 +72,53 @@ img {
     }
 }
 
+#grid3 {
+  #quarters {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .box {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    transition: background-color 200ms;
+    display: block;
+    overflow: hidden;
+    float: left;
+    text-align: center;
+    
+    h2 {
+      padding-top: 25%;
+    }
+  }
+  
+  .box:hover {
+    background-color: white;
+  }
+}
+
 #grid4 {
     margin-top: -.1em;
+    background: -webkit-linear-gradient(#2E2E1F, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#141F1F, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#141F1F, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#141F1F, white); /* Standard syntax */
+    
+}
+
+#grid5 {
+   background: -webkit-linear-gradient(#2E2E1F, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#141F1F, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#141F1F, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#141F1F, white); /* Standard syntax */
 }
 
 #grid6 {
-  background: -webkit-linear-gradient(#753fa9, white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#753fa9, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#753fa9, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#753fa9, white); /* Standard syntax */
+  background: -webkit-linear-gradient(#2E2E1F, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#141F1F, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#141F1F, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#141F1F, white); /* Standard syntax */
 }
 
 
