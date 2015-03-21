@@ -1,13 +1,27 @@
+$asset-pipeline: true;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  @include box_sizing;
+}
+
 body {
+    @include background-image(url("hippy.jpg"));
     min-width: 100%;
-    height: 100%;
+    height: 844px;
     margin: 0;
     left: 0;
     right: 0;
     bottom: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
     max-width: 1920px;
     overflow-x: hidden;
 }
@@ -28,99 +42,19 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 1920px;
 }
 
-.grid {
-    margin-left: -.17em;
-    margin-bottom: -.2em;
-    margin-top: -.2em;
-    margin-right: -.05em;
-    padding: 0;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    width: 33.33%;
-    height: 400px;
-    text-align: center;
-    overflow: hidden;
+figure {
+  width: 25%;
+  height: 25%;
+  margin: -.15em;
+  display: inline-block;
+  opacity: 0;
+  transition: background-color 200ms, opacity 200ms;
 }
 
-img {
-    height: 400px;
-    width: 100%;
+figure:hover {
+  background-color: white;
+  opacity: .7;
 }
-
-#grid3, #grid4 {
-    background-color: #141F1F;
-}
-
-#grid2, #grid5 {
-    background-color: white;
-}
-
-#grid1 {
-    width: 66.66%;
-    
-    .cache {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        opacity: .3;
-        top: 0;
-        overflow: hidden;
-        
-    }
-}
-
-#grid3 {
-  #quarters {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .box {
-    position: relative;
-    width: 50%;
-    height: 50%;
-    transition: background-color 200ms;
-    display: block;
-    overflow: hidden;
-    float: left;
-    text-align: center;
-    
-    h2 {
-      padding-top: 25%;
-    }
-  }
-  
-  .box:hover {
-    background-color: white;
-  }
-}
-
-#grid4 {
-    margin-top: -.1em;
-    background: -webkit-linear-gradient(#2E2E1F, white); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#141F1F, white); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#141F1F, white); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#141F1F, white); /* Standard syntax */
-    
-}
-
-#grid5 {
-   background: -webkit-linear-gradient(#2E2E1F, white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#141F1F, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#141F1F, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#141F1F, white); /* Standard syntax */
-}
-
-#grid6 {
-  background: -webkit-linear-gradient(#2E2E1F, white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#141F1F, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#141F1F, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#141F1F, white); /* Standard syntax */
-}
-
 
 
 
@@ -145,7 +79,7 @@ img {
 /* footer */
 
 footer {
-  clear: both;
+  /*clear: both; */
   padding-top: 15px;
   border-top: 1px solid white;
   color: #4A4A4A;;

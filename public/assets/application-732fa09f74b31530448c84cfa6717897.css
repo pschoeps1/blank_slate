@@ -1,0 +1,227 @@
+/* line 7, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 15, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+body {
+  min-width: 100%;
+  height: 100%;
+  margin: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  overflow-x: hidden;
+}
+
+/* line 29, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Arial;
+  color: #4A4A4A;
+}
+
+/* line 34, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+.container {
+  margin: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+}
+
+/* line 45, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+.grid {
+  margin-left: -.17em;
+  margin-bottom: -.2em;
+  margin-top: -.2em;
+  margin-right: -.05em;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 33.33%;
+  height: 400px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* line 60, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+img {
+  height: 400px;
+  width: 100%;
+}
+
+/* line 65, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid3, #grid4 {
+  background-color: #141F1F;
+}
+
+/* line 69, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid2, #grid5 {
+  background-color: white;
+}
+
+/* line 73, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid1 {
+  width: 66.66%;
+}
+/* line 76, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid1 .cache {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .3;
+  top: 0;
+  overflow: hidden;
+}
+
+/* line 90, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid3 #quarters {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 95, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid3 .box {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  transition: background-color 200ms;
+  display: block;
+  overflow: hidden;
+  float: left;
+  text-align: center;
+}
+/* line 105, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid3 .box h2 {
+  padding-top: 25%;
+}
+/* line 110, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid3 .box:hover {
+  background-color: white;
+}
+
+/* line 115, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid4 {
+  margin-top: -.1em;
+  background: -webkit-linear-gradient(#2E2E1F, white);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#141F1F, white);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#141F1F, white);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#141F1F, white);
+  /* Standard syntax */
+}
+
+/* line 124, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid5 {
+  background: -webkit-linear-gradient(#2E2E1F, white);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#141F1F, white);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#141F1F, white);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#141F1F, white);
+  /* Standard syntax */
+}
+
+/* line 131, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+#grid6 {
+  background: -webkit-linear-gradient(#2E2E1F, white);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#141F1F, white);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#141F1F, white);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#141F1F, white);
+  /* Standard syntax */
+}
+
+/* footer */
+/* line 161, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+footer {
+  clear: both;
+  padding-top: 15px;
+  border-top: 1px solid white;
+  color: #4A4A4A;
+}
+/* line 166, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+footer a {
+  color: #eaeaea;
+}
+/* line 168, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+footer a:hover {
+  color: #1F0441;
+  text-decoration: none;
+}
+/* line 173, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+footer small {
+  font-family: Arial;
+  padding: 1em;
+}
+/* line 178, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+footer nav {
+  margin-top: -2em;
+}
+/* line 182, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+footer ul {
+  font-family: Arial;
+  float: right;
+  list-style: none;
+  padding-right: 2em;
+}
+/* line 187, /home/ubuntu/workspace/app/assets/stylesheets/custom.css.scss */
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/static_pages.scss */
+.test {
+  transition: transform 200ms;
+  background-color: red;
+  width: 30em;
+  height: 30em;
+  margin: auto;
+  padding: 1em;
+}
+/* line 13, /home/ubuntu/workspace/app/assets/stylesheets/static_pages.scss */
+.test h1, .test p {
+  font-family: Arial;
+}
+
+/* line 19, /home/ubuntu/workspace/app/assets/stylesheets/static_pages.scss */
+.test:hover {
+  transform: skew(10deg, -20deg);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
