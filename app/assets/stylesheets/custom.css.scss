@@ -13,8 +13,89 @@ $asset-pipeline: true;
   @include box_sizing;
 }
 
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+
 body {
+    background-repeat: no-repeat;
+    min-width: 100%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    max-width: 1920px;
+    overflow-x: hidden;
+    @include font-feature-settings("kern", "liga", "pnum");
+    -webkit-font-smoothing: antialiased;
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
+button {
+  position: relative;
+  z-index: 1000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+.homepage {
     @include background-image(url("hippy.jpg"));
+    background-repeat: no-repeat;
     min-width: 100%;
     height: 844px;
     margin: 0;
@@ -26,87 +107,592 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-family: Arial;
-  color: #4A4A4A;
+aside {
+  float: left;
+  height: 844px;
+  width: 25%;
+  background-color: gray;
+  opacity: .8;
+  @include columns(12 8em);
+  @include transition(all 200ms ease-in-out);
 }
 
+
 .container {
+    float: right;
     margin: 0;
     left: 0;
     right: 0;
     bottom: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    height: 50em;
     max-width: 1920px;
 }
 
 figure {
   width: 25%;
   height: 25%;
-  margin: -.15em;
+  margin: -.19em;
   display: inline-block;
-  opacity: 0;
+  opacity: .8;
+  background-color: white;
   transition: background-color 200ms, opacity 200ms;
 }
 
 figure:hover {
   background-color: white;
-  opacity: .7;
+  opacity: 1;
+}
+
+/* help */
+.image-gradient-dynamic {
+  $image-gradient-color-top: #6A03CA; 
+  $transparency-top: 0.9;
+  $image-gradient-color-bottom: white; 
+  $transparency-bottom: 0.6;
+  $vertical-angle: 0deg;
+  $image-gradient-color-left: teal; 
+  $transparency-left: 0.8;
+  $image-gradient-color-right: white; 
+  $transparency-right: 0.8;
+  $horizontal-angle: 90deg;
+  
+  z-index: 1;
+  line-height: 0;
+  position: relative;
+  width: 100%;
+  height: 44em;
+
+  img {
+   height: auto;
+   left: 0; 
+   position: relative;
+   z-index: 1;
+   top: 0;
+   width: 100%;
+   height: 44em;
+  }
+
+  .copy {
+    @include transform(translate(-50%, -50%));
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    z-index: 999;
+
+    p {
+      color: white;
+      font-weight: 800;
+      line-height: 1.5em;
+      padding: 1em 2em;
+      position: relative;
+    }
+  }
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
+      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    display: block;
+    @include position(absolute, 0px 0px 0px 0px);
+    z-index: 1;
+
+    &:after {
+      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
+        transparentize($image-gradient-color-right, $transparency-right));
+      @include position(absolute, 0px 0px 0px 0px);
+      content: '';
+      display: block;
+      z-index: 1;
+    }
+  }
+}
+
+.title {
+  @include display(block);
+  @include position(absolute, 5em 0 0 0);
+  @include margin(0000);
+  @include padding(0000);
+  @include size(100% 20em);
+  z-index: 20;
+  text-align: center;
+  
+  
+  .centered {
+    @include size(100% 10em);
+    position: relative;
+    top: 5em;
+    color: white;
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
 }
 
 
+.sliding-menu-content {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-accent-color: #477DCA !default;
+  $light-gray: #CFD1E7 !default;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer */
-
-footer {
-  /*clear: both; */
-  padding-top: 15px;
-  border-top: 1px solid white;
-  color: #4A4A4A;;
-  a {
-    color: #eaeaea;;
-    &:hover {
-      color: #1F0441;;
-      text-decoration: none;
-    }
-  }
-  small {
-    font-family: Arial;
-    padding: 1em;
-  }
-  
-  nav {
-      margin-top: -2em;
-  }
-  
   ul {
-    font-family: Arial;
-    float: right;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
     list-style: none;
-    padding-right: 2em;
-    li {
-      float: left;
-      margin-left: 15px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $sliding-menu-border-color: $light-gray;
+  $sliding-menu-background: gray;
+  $sliding-menu-color: $light-gray;
+  $sliding-menu-border: 1px solid $sliding-menu-border-color;
+  $sliding-menu-background-hover: $base-accent-color;
+  $sliding-menu-color-hover: $light-gray;
+  $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
+
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(100% 4em);
+  @include transform(translateY(-4em));
+  @include transition(all 0.25s linear);
+  background: $sliding-menu-background;
+  z-index: 999999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  li a {
+    color: $sliding-menu-color;
+    display: inline-block;
+    float: right;
+    margin-top: 1em;
+    font-weight: bold;
+    padding: 1em;
+    transition: background-color 200ms;
+
+    &:focus {
+      background-color: $sliding-menu-background-focus;
+    }
+
+    &:hover {
+      background-color: $sliding-menu-background-hover;
+      color: $sliding-menu-color-hover;
+    }
+  }
+
+  &.is-visible {
+    @include transform(translateX(0));
+  }
+}
+
+.sliding-menu-fade-screen {
+  @include position(fixed, 0px 0px 0px 0px);
+  @include transition;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998;
+
+  &.is-visible {
+    opacity: 0.4;
+    visibility: visible;
+  }
+}
+
+.sliding-menu-button {
+  @include button(flat, gray);
+  @include position(fixed, 1.5em 0 0 1.5em);
+  height: 2.5em;
+  width: 2.5em;
+  z-index: 999999;
+  @include padding(0);
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+
+  img {
+    height: 2em;
+  }
+}
+
+
+
+
+
+.cards {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  @include outer-container(80%);
+  @include position(relative, null null null null);
+  z-index: 5;
+   @media only screen and (max-device-width: 480px) {
+     max-width: 400px;
+     @include outer-container(100%);
+     margin-left: 5%;
+     width: 300px;
+   }
+  }
+
+
+.card {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $card-border-color: $base-border-color;
+  $card-border: 1px solid $card-border-color;
+  $card-background: lighten($card-border-color, 10%);
+  $card-header-background: $card-background;
+  $card-hover-background: lighten($card-background, 5%);
+  $card-image-background: #A330DC;
+  $card-image-hover-background: lighten($card-image-background, 5%);
+  $card-margin: 1em;
+
+  @include flex-basis(15em);
+  @include flex-grow(1);
+  @include transition (all 0.2s ease-in-out);
+  @include outer-container(80%);
+  background-color: $card-background;
+  border-radius: $base-border-radius;
+  border: $card-border;
+  /*box-shadow: 0 2px 4px darken($base-background-color, 10%); */
+  cursor: pointer;
+  margin: 0 $card-margin $base-spacing $card-margin;
+  position: relative;
+  position: relative;
+
+  .card-image {
+    overflow: hidden;
+    max-height: 150px;
+
+    img {
+      @include transition (all 0.2s ease-in-out);
+      background: $card-image-background;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      width: 100%;
+    }
+  }
+
+  .card-header {
+    @include transition (all 0.2s ease-in-out);
+    background-color: $card-header-background;
+    border-bottom: $card-border;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: ($base-spacing / 3) ($base-spacing / 2);
+  }
+
+  .card-copy {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: ($base-spacing / 2) ($base-spacing / 2);
+
+    p {
+      margin: 0 0 ($base-spacing / 2);
+    }
+  }
+  
+  &:focus,
+  &:hover {
+    background-color: $card-hover-background;
+    
+    .card-image img {
+      background: $card-image-hover-background;
+    }
+  
+    .card-header {
+      background-color: $card-hover-background;
+    }
+  }
+
+  &:active {
+    background-color: $card-background;
+
+    .card-header {
+      background-color: $card-background;
     }
   }
 }
+
+.music-box {
+  $light-gray: #CFD1E7 !default;
+  $light-purple: #A330DC !default;
+  
+  @include size(100% 35em);
+  @include margin(0 0 0 0);
+  @include padding(0 0 0 0);
+  @include position(relative);
+  @include display(block);
+  @include background(gray);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  
+  .upper-bar {
+    @include size(50% 100%);
+    /*@include background(radial-gradient($light-gray, white) left repeat); */
+    @include position(relative, 0em null null null);
+    @include display(block);
+    z-index: 0;
+    
+    .nav1 {
+      @include position(relative);
+      @include display(block);
+      @include size(100% 100%);
+      overflow: hidden;
+      
+      div {
+        @include position(relative);
+        @include size(50% 50%);
+        @include background(rgba(163, 48, 220, .5));
+        float: left;
+        overflow: hidden;
+        line-height: 0;
+      }
+      
+      figcaption {
+        @include position(absolute, 7.5em null null 7.5em);
+        padding: 1em;
+        color: #fff;
+        text-transform: uppercase;
+        pointer-events: none;
+      }
+      
+      figcaption::before,
+      figcaption::after {
+        	pointer-events: none;
+      }
+
+      
+      .img {
+        @include size(100%);
+        opacity: .7;
+        @include position(relative);
+        @include display(block);
+        transition: all 200ms;
+        overflow: hidden;
+    
+    }
+       .img:hover {
+          @include transform(scale(1.2));
+          overflow: hidden;
+        }
+    
+  }
+  }
+  
+  .nav-tabs {
+    @include size(50% 100%);
+    @include margin(0 0 0 0 );
+    @include padding(0 0 0 0);
+    @include position(absolute, 0 0 null null);
+    @include display(block);
+    background-color: white;
+    
+    .accordion-tabs {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $tab-border: 1px solid $base-border-color;
+  $tab-content-background: lighten($light-gray, 10);
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $base-background-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  line-height: 1.5;
+  margin-bottom: $base-spacing;
+  padding: 0;
+
+  @include media(max-width $tab-mode) {
+    border-radius: $base-border-radius;
+    border: $tab-border;
+  }
+
+  .tab-header-and-content {
+    list-style: none;
+
+    @include media($tab-mode) {
+      display: inline;
+    }
+
+    &:first-child .tab-link {
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+
+      @include media(max-width $tab-mode) {
+        border-top: 0;
+      }
+    }
+
+    &:last-child .tab-link {
+      @include media(max-width $tab-mode) {
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+      }
+    }
+  }
+
+  .tab-link {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    color: $dark-gray;
+    display: block;
+    font-weight: bold;
+    padding: $base-spacing/2 $gutter/2;
+    text-decoration: none;
+
+    @include media($tab-mode) {
+      @include inline-block;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      border-top: 0;
+    }
+
+    &:hover {
+      color: $base-link-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.is-active {
+      background-color: $tab-active-background;
+
+      @include media($tab-mode) {
+        background-color: $tab-active-background;
+        border: $tab-border;
+        border-bottom-color: $tab-active-background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .tab-content {
+    background: $tab-content-background;
+    display: none;
+    padding: $base-spacing $gutter;
+    width: 100%;
+
+    @include media($tab-mode) {
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      border: $tab-border;
+      float: left;
+    }
+  }
+}
+
+  }
+  
+
+}
+
+.bottom {
+  @include size(100% 25em);
+  @include position(relative);
+  @include display(block);
+  @include margin(0 0 0 0);
+  @include padding(0 0 0 0);
+  background-color: gray;
+  
+  figure {
+    @include position(relative);
+    display: inline-block;
+    float: left;
+    @include size(100%);
+    @include padding(2em);
+    @include margin(0 0 0 0);
+    
+  }
+  
+  .fade-in-element {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  background-color: gray;
+  
+  line-height: $base-line-height;
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
+  @include clearfix;
+  background: $base-background-color;
+  margin-bottom: 4em;
+  text-align: center;
+  @include position(relative);
+  display: inline-block;
+  @include size(100%);
+
+}
+
+.js-fade-element-hide {
+  opacity: 0;
+}
+
+.js-fade-element-show {
+  @include transition (all 0.4s ease-in-out);
+  opacity: 1;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

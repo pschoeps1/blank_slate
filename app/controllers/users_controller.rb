@@ -11,6 +11,8 @@ class UsersController < ApplicationController
  def create
     @user = User.new(user_params)
     if @user.save
+      flash[:success] = "Flash message can be disabled in app/controllers/users_controller.rb line 14"
+      redirect_to @user
       # Handle a successful save.
     else
       render 'new'
