@@ -1,9 +1,23 @@
 Rails.application.routes.draw do
   
+  get 'events/new'
+
+  get 'calendar/show'
+
+  get 'sessions/new'
+
   root             'static_pages#home'
-  get 'help'      =>    'static_pages#help'
-  get 'signup'    => 'users#new'
+  get    'help'       => 'static_pages#help'
+  get    'signup'     => 'users#new'
+  get    'login'      => 'sessions#new'
+  post   'login'      => 'sessions#create'
+  delete 'logout'     => 'sessions#destroy'
   resources :users
+  resources :events
+  
+  get    'newevent'   => 'events#new'
+  
+  get    'calendar'   => 'calendar#show'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

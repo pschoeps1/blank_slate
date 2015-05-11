@@ -1,0 +1,21 @@
+<button type="button" class="js-menu-trigger sliding-menu-button">
+  <img src="<%= image_path('menu-white.png') %>" alt="Menu Icon">
+</button>
+
+<nav class="js-menu sliding-menu-content">
+  <ul class="float-left">
+      <li><a href="javascript:void(0)"><%= link_to "Help", help_path %></a></li>
+      <li><a href="javascript:void(0)"><%= link_to "Home", root_path %></a></li>
+  </ul>
+  <ul>
+    <% if logged_in? %>
+    <li><a href="javascript:void(0)"><%= link_to "Profile", current_user %></a></li>
+    <li><a href="javascript:void(0)"><%= link_to "Settings", edit_user_path(current_user) %></a></li>
+    <li><a href="javascript:void(0)"><%= link_to "Log Out", logout_path, method: "delete" %></a></li>
+    <% else %>
+    <li><a href="javascript:void(0)"><%= link_to "Log In", login_path %></a></li>
+    <% end %>
+  </ul>
+</nav>
+
+<div class="js-menu-screen sliding-menu-fade-screen"></div>

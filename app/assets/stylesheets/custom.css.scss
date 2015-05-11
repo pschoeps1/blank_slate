@@ -21,6 +21,24 @@ $asset-pipeline: true;
   }
 }
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+    $blue: #05163d;
+    $lighter-variant: #1f376c;
+    $darker-variant: #00050F;
+
 
 body {
     background-repeat: no-repeat;
@@ -93,54 +111,75 @@ picture {
   max-width: 100%;
 }
 
-.homepage {
-    @include background-image(url("hippy.jpg"));
-    background-repeat: no-repeat;
-    min-width: 100%;
-    height: 844px;
-    margin: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0;
-    max-width: 1920px;
-    overflow-x: hidden;
+/*Home Page*/
+
+$darkgrey: #2d384d;
+$blue: #1d73ec;
+$white: #fdfdfd;
+$grey: #838ca3;
+$lightgrey: #b6bed8;
+$cyanwhite: #d5e0ef;
+
+.home-container {
+  max-width: 1400px;
+  height: 60em;
+  margin: auto;
+  position: relative;
 }
 
-aside {
+.home-aside {
+  @include position(relative);
   float: left;
-  height: 844px;
-  width: 25%;
-  background-color: gray;
-  opacity: .8;
-  @include columns(12 8em);
-  @include transition(all 200ms ease-in-out);
+  min-height: 60em;
+  width: 15%;
+  @include background(url('aside-rain.jpg'));
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+
+.home-header {
+  position: relative;
+  float: right;
+  width: 85%;
+  height: 12em;
+  @include background(url('aside-lake.jpg'));
+}
+
+.home-content {
+  position: relative;
+  float: right;
+  width: 85%;
+  height: 48em;;
+  background-color: $white;
+  
+  .top-banner {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 3.5em;
+    background-color: $darkgrey;
+    padding: 1em;
+    h1{color: $white;}
+  }
+  
+  .chat {
+    padding: 1em;
+  }
 }
 
 
-.container {
-    float: right;
-    margin: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0;
-    width: 75%;
-    height: 50em;
-    max-width: 1920px;
-}
-
-figure {
+/*styling for the hover box select effects seen at the performance page of umprojectmusic.com/performance */
+.box {
   width: 25%;
   height: 25%;
-  margin: -.19em;
-  display: inline-block;
+  float: left;
+  display: block;
   opacity: .8;
   background-color: white;
   transition: background-color 200ms, opacity 200ms;
 }
 
-figure:hover {
+.box:hover {
   background-color: white;
   opacity: 1;
 }
@@ -270,12 +309,14 @@ figure:hover {
   z-index: 999999;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  
+  
 
   li a {
     color: $sliding-menu-color;
     display: inline-block;
     float: right;
-    margin-top: 1em;
+    margin-top: .25em;
     font-weight: bold;
     padding: 1em;
     transition: background-color 200ms;
@@ -677,8 +718,16 @@ figure:hover {
 
 }
 
+.calendar1 {
+  position: relative;
+  @include outer-container(80%);
+}
 
-
+.event-creation, .event-show, .user-show, .user-edit, .user-signup {
+  position: relative;
+  @include outer-container(80%);
+  top: 4em;
+}
 
 
 
