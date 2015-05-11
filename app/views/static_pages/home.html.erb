@@ -1,21 +1,34 @@
-<section class="homepage">
-<aside></aside>
-<section class="container">
-    <figure class="box" id="1"></figure>
-    <figure class="box" id="2"></figure>
-    <figure class="box" id="3"></figure>
-    <figure class="box" id="4"></figure>
-    <figure class="box" id="5"></figure>
-    <figure class="box" id="6"></figure>
-    <figure class="box" id="7"></figure>
-    <figure class="box" id="8"></figure>
-    <figure class="box" id="9"></figure>
-    <figure class="box" id="10"></figure>
-    <figure class="box" id="11"></figure>
-    <figure class="box" id="12"></figure>
-    <figure class="box" id="13"></figure>
-    <figure class="box" id="14"></figure>
-    <figure class="box" id="15"></figure>
-    <figure class="box" id="16"></figure>
+<section class="home-container">
+<aside class="home-aside"></aside>
+<header class="home-header"></header>
+<section class="home-content">
+    <section class="top-banner"><h1>Heading 1</h1></section>
+    <section class="chat">
+      <%= render 'layouts/firechat' %>
+      <div id='firechat-wrapper'></div>
+    </section>
+    <%= link_to "Create New Event", newevent_path %>
+    <section class="calendar1">
+      <script>
+       $(document).ready(function() {
+
+        // page is now ready, initialize the calendar...
+
+       $('#calendar').fullCalendar({
+        // put your options and callbacks here
+           events: '/events.json'
+       })
+
+           });
+       </script>
+       <div id="calendar"></div>
+    </section>
+
 </section>
 </section>
+
+
+
+
+
+
