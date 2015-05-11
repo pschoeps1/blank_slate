@@ -132,7 +132,7 @@ $cyanwhite: #d5e0ef;
   float: left;
   min-height: 60em;
   width: 15%;
-  @include background(url('aside-rain.jpg'));
+  background-image: image-url('aside-rain.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
 }
@@ -142,7 +142,7 @@ $cyanwhite: #d5e0ef;
   float: right;
   width: 85%;
   height: 12em;
-  @include background(url('aside-lake.jpg'));
+  background-image: image-url('aside-lake.jpg');
 }
 
 .home-content {
@@ -723,7 +723,7 @@ $cyanwhite: #d5e0ef;
   @include outer-container(80%);
 }
 
-.event-creation, .event-show, .user-show, .user-edit, .user-signup {
+.event-creation, .event-show, .user-show, .user-edit, .user-signup, .user-log-in {
   position: relative;
   @include outer-container(80%);
   top: 4em;
