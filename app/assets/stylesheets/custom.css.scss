@@ -179,11 +179,14 @@ hr {
   }
 }
 
+
+
+
 .sliding-menu-button {
   @include button(flat, gray);
-  @include position(fixed, 1.5em 0 0 1.5em);
-  height: 2.5em;
-  width: 2.5em;
+  @include position(fixed, 0 0 0 0);
+  height: .5em;
+  width: .5em;
   z-index: 999999;
   @include padding(0);
   display: inline-block;
@@ -205,20 +208,171 @@ hr {
 
 /* put all styling for individual pages below, organize every category with a comment to make reading the code easier */
 
-/* Home Page */
-div {
+/* user show page */
+
+.about-header {
   width: 100%;
+  height: 4.5em;
+  background-color: purple;
+  position: relative;
+  
+  .logo {
+    position: absolute;
+  }
+  
+  .profile-top {
+    position: absolute;
+    left: 40%;
+    
+  }
+  
+  .life-top {
+    position: absolute;
+    right: 0;
+  }
 }
-/*etc...*/
 
-/*Help Page */
-.class {
-  background-color: blue;
+.profile-box {
+  position: relative;
+  left: 5%;
+  margin-top: 2%;
+  height: 20em;
+  width: 18em;
+  float: left;
+  
+  .profile-box-header {
+    position: relative;
+    top: 0;
+    background-color: purple;
+    text-align: center;
+    color: white;
+    height: 2em;
+    
+    h1 {
+      position: relative;
+      top: 15%;
+    }
+  }
+  
+  .profile-pic {
+    position: absolute;
+    width: 100%;
+  }
+  
+  .change-profile-pic {
+    text-align: center;
+    position: absolute;
+    background-color: purple;
+    color: white;
+    width: 100%;
+    height: 1.5em;
+    bottom: 31.75%;
+    h1 {
+      position: relative;
+      top: 5%;
+    }
+  }
+  
 }
 
-/*etc...*/
+.profile-data-box {
+  width: 65%;
+  height: 50em;
+  position: absolute;
+  left: 30%;
+  margin-top: 2%;
+  
+  .profile-data-box-header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: purple;
+    height: 2em;
+    border: none;
+    
+    h1 {
+      position: relative;
+      top: 18%;
+      text-align: center;
+      color: white;
+    }
+  }
+  .about {
+    position: absolute;
+    top: 5%;
+    width: 30%;
+    height: 80%;
+    border: 3px solid gray;
+    display: inline-block;
+    
+    .about-header {
+      position: relative;
+      top: 0;
+      width: 100%;
+      background-color: purple;
+      height: 2em;
+      border: none;
+      color: white;
+      text-align: center;
+      h2 {
+        position: relative;
+        top: 15%;
+      }
+    }
+  }
+  
+  .school {
+    position: absolute;
+    top: 5%;
+    width: 30%;
+    height: 80%;
+    border: 3px solid gray;
+    display: inline-block;
+    left: 35%;
+    
+    .school-header {
+      position: relative;
+      top: 0;
+      width: 100%;
+      background-color: purple;
+      height: 2em;
+      border: none;
+      color: white;
+      text-align: center;
+      h2 {
+        position: relative;
+        top: 15%;
+      }
+    }
+  }
+  
+  .whoareyou {
+    position: absolute;
+    top: 5%;
+    width: 30%;
+    height: 80%;
+    border: 3px solid gray;
+    display: inline-block;
+    left: 70%;
+    
+    .whoareyou-header {
+      position: relative;
+      top: 0;
+      width: 100%;
+      background-color: purple;
+      height: 2em;
+      border: none;
+      color: white;
+      text-align: center;
+      h2 {
+        position: relative;
+        top: 15%;
+      }
+    }
+  }
+}
 
-
+  
 
 
 

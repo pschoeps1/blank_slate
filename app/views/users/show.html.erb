@@ -1,3 +1,30 @@
-<section class="user-show">
-<h1><%= @user.name %>, <%= @user.email %></h1>
+<section class="about-header">
+    <section class="logo js-menu-trigger">
+    <img src="<%= image_path('urvirl_logo.png') %>" alt="Menu Icon">
+    </section>
+    <section class="profile-top">
+        <img src="<%= image_path('urvrl_profile.png') %>" alt="Menu Icon">
+    </section>
+    <section class="life-top">
+        <img src="<%= image_path('urvirl_life.png') %>" alt="Menu Icon">
+    </section>
+</section>
+
+<aside class="profile-box">
+    <div class="profile-box-header">
+        <h1><%= @user.name %></h1>
+    </div>
+    <div class="profile-pic"><img src="<%= image_path('hippy.jpg') %>" alt="Menu Icon"></div>
+    <a href="#"><div class="change-profile-pic"><h1>Change Profile Picture</h1></div></a>
+</aside>
+
+<section class="profile-data-box">
+    <section class="profile-data-box-header"><h1>yoUR Life</h1></section>
+    <section class="about">
+        <div class="about-header"><h2>About Me</h2></div>
+    </section>
+    <section class="school">
+        <div class="school-header"><h2>School</h2></div>
+    </section>
+    <section class="whoareyou"><div class="whoareyou-header"><h2>Who Are You</h2></div></section>
 </section>
