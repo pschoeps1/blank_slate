@@ -159,3 +159,14 @@
         </table>
         <button class="profile-update">Update</button>
 </section>
+
+<section class="show-classes-test">
+    <div class="col-md-8">
+    <% if @user.school_classes.any? %>
+      <h3>Classes (<%= @user.school_classes.count %>)</h3>
+      <ol class="school-classes">
+        <%= render @schoolclasses %>
+      </ol>
+    <% end %>
+  </div>
+</section>

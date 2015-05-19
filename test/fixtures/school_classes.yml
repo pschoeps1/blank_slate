@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+orange:
+  name: "I just ate an orange!"
+  teacher: "Paul"
+  created_at: <%= 10.minutes.ago %>
+
+tau_manifesto:
+  name: "Check out the @tauday site by @mhartl: http://tauday.com"
+  teacher: "John"
+  created_at: <%= 3.years.ago %>
+
+cat_video:
+  name: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  teacher: "Kerry"
+  created_at: <%= 2.hours.ago %>
+
+most_recent:
+  name: "Writing a short test"
+  teacher: "Susan"
+  created_at: <%= Time.zone.now %>
