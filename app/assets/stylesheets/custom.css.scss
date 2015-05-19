@@ -250,13 +250,13 @@ hr {
     
     h1 {
       position: relative;
-      top: 15%;
+      top: 20%;
     }
   }
   
   .profile-pic {
-    position: absolute;
     width: 100%;
+    height: 40%;
   }
   
   .change-profile-pic {
@@ -266,7 +266,7 @@ hr {
     color: white;
     width: 100%;
     height: 1.5em;
-    bottom: 31.75%;
+    top: 60%;
     h1 {
       position: relative;
       top: 5%;
@@ -291,10 +291,10 @@ hr {
     border: none;
     
     h1 {
-      position: relative;
-      top: 18%;
       text-align: center;
       color: white;
+      position: relative;
+      top: 20%;
     }
   }
   .about {
@@ -316,7 +316,7 @@ hr {
       text-align: center;
       h2 {
         position: relative;
-        top: 15%;
+        top: 20%;
       }
     }
   }
@@ -341,7 +341,7 @@ hr {
       text-align: center;
       h2 {
         position: relative;
-        top: 15%;
+        top: 20%;
       }
     }
   }
@@ -366,11 +366,61 @@ hr {
       text-align: center;
       h2 {
         position: relative;
-        top: 15%;
+        top: 20%;
       }
-    }
   }
 }
+
+.profile-data {
+  border: none;
+  tr {
+    border: none;
+  }
+  td {
+    border: none;
+    padding-left: 1em;
+    padding-bottom: 1.25em;
+    font-size: .85em;
+  }
+}
+
+.class-schedule {
+  border: 2px solid gray;
+  margin: auto;
+  width: 93%;
+  tr {
+    border: 2px solid gray;
+  }
+  td {
+    border: none;
+    padding-left: 1em;
+    font-size: .85em;
+  }
+  #class-schedule-header {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+.profile-update {
+  background-color: white;
+  color: gray;
+  border: 3px solid gray;
+  position: absolute;
+  bottom: 0em;
+  right: 0em;
+  border-radius: 0;
+  border-bottom: none;
+  border-right: none;
+  transition: all 200ms;
+}
+
+.profile-update:hover {
+  background-color: gray;
+  color: white;
+}
+}
+
+
 
   
 
