@@ -1,0 +1,8 @@
+<%= form_for(@group) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :teacher %>
+      <%= f.text_field :teacher, class: 'form-control' %>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

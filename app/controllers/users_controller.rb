@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @schoolclasses = @user.school_classes
+    @groups = @user.groups
+    @group = current_user.groups.build 
   end
 
   def new

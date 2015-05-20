@@ -72,5 +72,13 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?('')
   end
   
+  test "associated groups should be destroyed" do
+    @user.save
+    @user.groups.create!(content: "Lorem ipsum")
+    assert_difference 'Group.count', -1 do
+      @user.destroy
+    end
+  end
+  
   
 end

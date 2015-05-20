@@ -159,14 +159,16 @@
         </table>
         <button class="profile-update">Update</button>
 </section>
+</section>
 
-<section class="show-classes-test">
-    <div class="col-md-8">
-    <% if @user.school_classes.any? %>
-      <h3>Classes (<%= @user.school_classes.count %>)</h3>
-      <ol class="school-classes">
-        <%= render @schoolclasses %>
+<section class="class-creation">
+    <%= render 'layouts/group_form' %>
+<div class="col-md-8">
+ 
+      <h3>Classes (<%= @user.groups.count %>)</h3>
+      <ol class="microposts">
+        <%= render @groups %>
       </ol>
-    <% end %>
+   
   </div>
 </section>
