@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
     @group = current_user.groups.build(group_params)
     if @group.save
       flash[:success] = "Class created!"
-      redirect_to root_url
+      redirect_to @group
     else
       render 'static_pages/home'
     end

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post   'login'      => 'sessions#create'
   delete 'logout'     => 'sessions#destroy'
   resources :users
+  get 'users/:id/dashboard'  => 'users#dashboard'
   resources :groups,          only: [:create, :destroy]
   resources :events
   

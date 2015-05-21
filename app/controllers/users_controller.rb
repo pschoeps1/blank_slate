@@ -35,6 +35,12 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+  
+  def dashboard
+    @user = User.find(params[:id])
+    @groups = @user.groups
+    @group = current_user.groups.build
+  end
 
   private
 

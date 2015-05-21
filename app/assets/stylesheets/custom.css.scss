@@ -426,6 +426,43 @@ hr {
   width: 20em;
 }
 
+
+/* dashboard styling */
+.dashboard-aside {
+  border: 2px solid gray;
+  height: 50em;
+  width: 15%;
+  position: relative;
+  left: 2%;
+  float: left;
+  top: 5em;
+}
+.dashboard-container {
+    border: 2px solid gray;
+    height: 75em;
+    width: 80%;
+    position: relative;
+    left: 18%;
+    top: 5em;
+  
+  .dashboard-tabs {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+    li {
+      background-color: gray;
+      display: inline-block;
+      position: relative;
+      height: 20em;
+      width: 26em;
+      margin: 4%;
+      left: 9em;
+}
+    }
+  }
+
+
   
 
 

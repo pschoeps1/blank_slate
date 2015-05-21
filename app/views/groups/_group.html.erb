@@ -1,6 +1,6 @@
 <li id="group-<%= group.id %>">
   <span class="user"><%= link_to group.user.name, group.user %></span>
-  <span class="content"><%= group.name %></span>
+  <span class="name"><%= group.name %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(group.created_at) %> ago.
   </span>
