@@ -68,6 +68,8 @@ GEM
     debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.5.2)
+    faker (1.4.2)
+      i18n (~> 0.5)
     ffi (1.9.8)
     formatador (0.2.5)
     fullcalendar-rails (2.3.1.0)
@@ -227,6 +229,7 @@ DEPENDENCIES
   bourbon
   byebug (= 3.4.0)
   coffee-rails (= 4.1.0)
+  faker (= 1.4.2)
   fullcalendar-rails
   guard-minitest (= 2.3.1)
   jbuilder (= 2.2.3)

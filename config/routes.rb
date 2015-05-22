@@ -12,10 +12,20 @@ Rails.application.routes.draw do
   get    'login'      => 'sessions#new'
   post   'login'      => 'sessions#create'
   delete 'logout'     => 'sessions#destroy'
-  resources :users
+  
+ # get 'users/:id/dashboard'  => 'users#dashboard'
+  resources :users  do
+    member do
+      get 'dashboard'
+    end
+    resources :groups
+  end
+  
+  
+  
   resources :events
   
-  get    'newevent'   => 'events#new'
+
   
   get    'calendar'   => 'calendar#show'
   
