@@ -6,6 +6,7 @@ $asset-pipeline: true;
   box-sizing:         border-box;
 }
 
+
 /* Styling for the validations seen upon unsuccesful signup, leave alone for now */
 
 #error_explanation {
@@ -105,8 +106,8 @@ hr {
 /* Styling for the nav menu slide down, leave alone for now */
 .sliding-menu-content {  
   ///////////////////////////////////////////////////////////////////////////////////
-  $base-accent-color: #477DCA !default;
-  $light-gray: #CFD1E7 !default;
+  $base-accent-color: purple !default;
+  $light-gray: purple !default;
 
   ul {
     padding: 0;
@@ -122,16 +123,16 @@ hr {
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $sliding-menu-border-color: $light-gray;
-  $sliding-menu-background: gray;
-  $sliding-menu-color: $light-gray;
+  $sliding-menu-border-color: purple;
+  $sliding-menu-background: purple;
+  $sliding-menu-color: purple;
   $sliding-menu-border: 1px solid $sliding-menu-border-color;
   $sliding-menu-background-hover: $base-accent-color;
-  $sliding-menu-color-hover: $light-gray;
+  $sliding-menu-color-hover: purple;
   $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
 
   @include position(fixed, 0px auto 0px 0px);
-  @include size(100% 4em);
+  @include size(100% 4.5em);
   @include transform(translateY(-4em));
   @include transition(all 0.25s linear);
   background: $sliding-menu-background;
@@ -142,10 +143,10 @@ hr {
   
 
   li a {
-    color: $sliding-menu-color;
+    color: white;
     display: inline-block;
     float: right;
-    margin-top: .25em;
+    margin-top: .5em;
     font-weight: bold;
     padding: 1em;
     transition: background-color 200ms;
@@ -155,8 +156,8 @@ hr {
     }
 
     &:hover {
-      background-color: $sliding-menu-background-hover;
-      color: $sliding-menu-color-hover;
+      background-color: white;
+      color: white;
     }
   }
 
@@ -206,11 +207,13 @@ hr {
   top: 4em;
 }
 
+
+
 /* put all styling for individual pages below, organize every category with a comment to make reading the code easier */
 
 /* user show page */
 
-.about-header {
+.header {
   width: 100%;
   height: 4.5em;
   background-color: purple;
@@ -305,7 +308,7 @@ hr {
     border: 3px solid gray;
     display: inline-block;
     
-    .about-header {
+    .about-sub-header {
       position: relative;
       top: 0;
       width: 100%;
@@ -318,6 +321,8 @@ hr {
         position: relative;
         top: 20%;
       }
+    }
+    
     }
   }
   
@@ -418,7 +423,7 @@ hr {
   background-color: gray;
   color: white;
 }
-}
+
 
 .class-creation {
   position: absolute;
@@ -432,18 +437,63 @@ hr {
   border: 2px solid gray;
   height: 50em;
   width: 15%;
-  position: relative;
+  position: absolute;
   left: 2%;
   float: left;
-  top: 5em;
+  top: 6em;
 }
 .dashboard-container {
     border: 2px solid gray;
     height: 75em;
     width: 80%;
-    position: relative;
+    position: absolute;
     left: 18%;
-    top: 5em;
+    top: 6em;
+    
+    .dashboard-container-header {
+      position: relative;
+      top: 0;
+      width: 100%;
+      background-color: purple;
+      height: 2em;
+      border: none;
+      color: white;
+      text-align: center;
+      h1 {
+        position: relative;
+        top: 20%;
+      }
+    }
+    
+    .group-creation {
+        position: absolute;
+        background-color: purple;
+        top: 3em;
+        left: 1em;
+        height: 3em;
+        width: 9em;
+        border-radius: 0;
+        border-right: none;
+        transition: all 200ms;
+        border: 2px solid gray;
+        
+
+      }
+    
+    
+    .group-creation:hover {
+      background-color: white;
+      color: purple;
+    }
+      
+      
+  .dashboard-tabs-container {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    
   
   .dashboard-tabs {
     height: 100%;
@@ -451,16 +501,56 @@ hr {
     position: absolute;
     
     li {
-      background-color: gray;
+      background-color: #A32FA3;
       display: inline-block;
       position: relative;
-      height: 20em;
-      width: 26em;
-      margin: 4%;
-      left: 9em;
-}
+      height: 20%;
+      width: 20%;
+      margin: 3.5%;
+      left: 8.5%;
+      
+      .group-li-header {
+         position: relative;
+      top: 0;
+      width: 100%;
+      background-color: purple;
+      height: 2em;
+      border: none;
+      color: white;
+      text-align: center;
+      h2 {
+        position: relative;
+        top: 20%;
+      }
+    }
+    
+    .content {
+      width: 100%;
+      position: relative;
+      height: 60%;
+    }
+    
+    .group-view {
+      width: 100%;
+      height: 27%;
+      background-color: purple;
+      text-align: center;
+      
+      h2 {
+        position: relative;
+        top: 32%;
+        color: white;
+        transition: background-color 300ms;
+      }
+    }
+    
+    .group-view:hover {
+      background-color: lighten(purple, 5%);
     }
   }
+  }
+}
+}
 
 
   

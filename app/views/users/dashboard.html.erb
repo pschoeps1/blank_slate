@@ -1,6 +1,14 @@
 <aside class="dashboard-aside"></aside>
 <section class="dashboard-container">
+  <div class="dashboard-container-header"><h1>Groups</h1></div>
+  
+  <%= link_to 'Create Group', new_user_group_path(@user, @group) %>
+ 
+  <div class="dashboard-tabs-container">
   <ul class="dashboard-tabs">
+    <% if @groups.any? %>
       <%= render @groups %>
+    <% end %>
   </ul>
+  </div>
 </section>

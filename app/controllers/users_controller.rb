@@ -37,9 +37,10 @@ class UsersController < ApplicationController
   end
   
   def dashboard
-    @user = User.find(params[:id])
+    @user = current_user
     @groups = @user.groups
     @group = current_user.groups.build
+    @group_show = Group.find(params[:id])
   end
 
   private

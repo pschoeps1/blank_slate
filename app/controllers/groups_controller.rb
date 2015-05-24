@@ -2,12 +2,14 @@ class GroupsController < ApplicationController
   #  before_action :logged_in_user, only: [:create, :destroy]
 
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @group = current_user.groups.build
   end
   
   def show
     @user = User.find(params[:user_id])
+    @group_show = Group.find(params[:id])
+    @group = @user.groups.find(params[:id])
   end
   
   def create
