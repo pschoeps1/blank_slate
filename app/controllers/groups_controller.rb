@@ -8,7 +8,6 @@ class GroupsController < ApplicationController
   
   def show
     @user = User.find(params[:user_id])
-    @group_show = Group.find(params[:id])
   end
   
   def create
