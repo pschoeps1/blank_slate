@@ -1,21 +1,4 @@
-<%= render 'layouts/firechat' %>
-<div id='firechat-wrapper'></div>
-<%= link_to "Create New Event", new_event_path %>
 
-      <script>
-       $(document).ready(function() {
-
-        // page is now ready, initialize the calendar...
-
-       $('#calendar').fullCalendar({
-        // put your options and callbacks here
-           events: '/events.json'
-       })
-
-           });
-       </script>
-       
-<div id="calendar"></div>  
 
 
 

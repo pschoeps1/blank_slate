@@ -15,8 +15,8 @@ gem 'neat'
 gem 'bitters'
 gem 'refills'
 gem 'fullcalendar-rails'
-gem 'momentjs-rails'
 gem 'faker',                '1.4.2'
+gem 'momentjs-rails'
 
 
 

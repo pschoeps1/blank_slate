@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'events/new'
-
-  get 'calendar/show'
 
   get 'sessions/new'
 
@@ -14,20 +10,7 @@ Rails.application.routes.draw do
   delete 'logout'     => 'sessions#destroy'
   
  # get 'users/:id/dashboard'  => 'users#dashboard'
-  resources :users  do
-    member do
-      get 'dashboard'
-    end
-    resources :groups
-  end
-  
-  
-  
-  resources :events
-  
-
-  
-  get    'calendar'   => 'calendar#show'
+  resources :users  
   
 
   # The priority is based upon order of creation: first created -> highest priority.

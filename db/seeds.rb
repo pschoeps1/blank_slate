@@ -15,9 +15,3 @@ User.create!(name:  "Patrick Schoeps",
            )
 end
 
-users = User.order(:created_at).take(6)
-6.times do
-  name = Faker::Name.name
-  users.each { |user| user.groups.create!(name: name) }
-  users.each { |user| user.groups.create!(teacher: name) }
-end

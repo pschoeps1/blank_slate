@@ -2,8 +2,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @groups = @user.groups
-    @group = current_user.groups.build 
   end
 
   def new
@@ -38,9 +36,6 @@ class UsersController < ApplicationController
   
   def dashboard
     @user = current_user
-    @groups = @user.groups
-    @group = current_user.groups.build
-    @group_show = Group.find(params[:id])
   end
 
   private

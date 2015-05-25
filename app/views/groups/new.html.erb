@@ -1,9 +1,0 @@
-<%= form_for [@user, @group] do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :teacher %>
-      <%= f.text_field :teacher, class: 'form-control' %>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-<% end %>
